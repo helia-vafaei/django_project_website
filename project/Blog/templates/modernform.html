@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+
+        <style>
+
+        a:link, a:visited {
+        background-color: #c5c33d;
+        color: rgb(15, 11, 41);
+        padding: 14px 25px;
+        text-align: center;
+        text-decoration: none ;
+        widows: 40% ;
+        display: grid;
+        width: auto ;
+
+        }
+
+        a:hover, a:active {
+        background-color: rgb(145, 160, 15);
+        }
+
+        img {
+          width: 100%;
+        }
+
+
+        body, html {
+        height: 100%;
+        }
+
+        * {
+        box-sizing: border-box;
+        }
+
+        .bg-image {
+        
+
+        /* Add the blur effect */
+        filter: blur(9px);
+        -webkit-filter: blur(9px);
+
+        /* Full height */
+        height: 100%;
+
+        /* Center and scale the image nicely */
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        }
+
+        /* Position text in the middle of the page/image */
+        .bg-text {
+        background-color: rgb(0,0,0); /* Fallback color */
+        background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+        color: rgb(221, 218, 61);
+        font-weight: bold;
+        border: 4px solid #e0cb6e;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 2;
+        width: 45%;
+        padding:40px;
+        text-align: center;
+        }
+
+        </style>
+</head>
+
+<body style="background-image: url('https://wallpaperaccess.com/full/3677086.jpg');">
+
+	
+    <div class="bg-text">
+    
+    
+    <h1> لطفا گزینه ی مورد نظر خود را انتخاب کنید</h1>
+    
+     <br></br>
+  <div class="container-fluid" dir="rtl" style="float:;">
+    <form class="form" action="{% url 'show' %}" method="POST">
+      <div class="form-group" dir="rtl">
+        <select class="form-control" name="genre" id="idOrigin" style="background-color:rgb(221, 218, 60);font-size:200%;">
+          <option value="-1 "> موضوع کتاب </option>
+			
+          <!-- <option name="genre" value="تاریخی">تاریخی</option> -->
+          <option value="تاریخی"> 
+            تاریخی
+          </option>
+          <option value="علمی تخیلی"> 
+            علمی تخیلی
+          </option>
+          <option value="فانتزی"> 
+            فانتزی
+          </option>
+          <option value="جنایی"> 
+            جنایی
+          </option>
+
+           
+           
+          
+          
+          
+        
+
+          <input class="btn btn-primary" type="submit" value="  ثبت  " style="background-color:rgb(221, 218, 60);font-size:200%;">
+          <!-- <a href="/show2"><button type="button" style="background-color:rgb(221, 218, 60);font-size:200%;">اضافه کردن کتاب</button></a> -->
+          <a style="background-color:rgb(221, 218, 60);font-size:170%;" href="/show2" >اضافه کردن کتاب</a>
+          
+
+        <br>
+
+        <br>
+        </select>
+      </div>
+    </form>
+  </div>
+</body>

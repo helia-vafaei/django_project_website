@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table, th {
+  border: 1px solid black;
+}
+</style>
+</head>
+<body style="background-image: url('https://data.whicdn.com/images/250028823/original.jpg');background-repeat: no-repeat;background-attachment: fixed;background-size: cover;">
+
+<h1 style="float: right; color:rgb(248, 224, 248);">لیست های کتاب های موجود در موضوع دلخواه شما</h1>
+
+
+
+<table style= "width:100% ;color:rgb(248, 224, 248) ; font-size:150%;">
+  <tr>{% for book in books %}
+    
+    <th>{{book.summery}}</th>
+    <th>{{book.writer}}</th> 
+    <th>{{book.name}}</th>
+  
+
+  </tr>{% endfor %}
+</table>
+
+</body>
+</html>
+
